@@ -15,7 +15,6 @@ int main(){
 	int m = 0;
 	int*result = new int[333334];
 	
-
 	if (n.length() == 1){
 		cout << ((int)n[0]-48) << endl;
 		return 0;
