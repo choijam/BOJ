@@ -23,13 +23,11 @@ int main(){
 	else j = n.length() - 1;
 
 		while (1){
-		
 			for (i = 0; i < 3; i++){
 				sum = sum + (((int)n[j]) - 48) * pow(2, k++);
 				j--;
 				if (j == -1)
 					break;
-				//j--;
 			}
 			result[m++] = sum;
 			sum = 0;
