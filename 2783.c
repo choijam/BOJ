@@ -6,8 +6,7 @@ int main()
 	int n;
 	int i;
 	double min;
-	scanf("%lf %lf",&x,&y);
-	scanf("%d",&n);
+	scanf("%lf %lf %d",&x,&y,&n);
 	min=(x/y)*1000;
 	
 	while(n--){
