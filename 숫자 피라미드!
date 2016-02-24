@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int k = 0;
+	for (int i = 1; i <= 9; i++) {
+		k = k * 10 + i;
+		cout << k << " * 8 + " << i << " = " << k * 8 + i << endl;
+	}
+}
