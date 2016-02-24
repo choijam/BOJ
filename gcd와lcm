@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a, b,r,gcd,lcm,key;
+	cin>>a>>b;
+	key = a*b;
+
+	while (b) {
+		r = a%b;
+		a = b;
+		b =r;
+	}
+
+	cout <<a<< endl;
+	cout<<key/a<<endl;
+	return 0;
+}
