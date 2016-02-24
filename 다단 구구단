@@ -1,0 +1,16 @@
+int main()
+{
+	int i, j,k,input;
+	cin >> input;
+
+	for (i = 2; i <= 9; i+=input) {
+		for (j = 1; j <= 9; j++) {
+			for (k = i; k < i + input; k++) {
+				if (k > 9) break;
+				cout << k << "*" << j << "=" << k*j << "\t";
+			}
+			cout << endl;
+		}
+		cout << endl;
+	}
+}
