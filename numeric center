@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n, head, tail, i,j,numeric;
+	n = 10000;
+	head = 0;
+	for (i = 1; i < n + 1; i++) {
+		tail = 0;
+		head = head + i - 1;
+		tail = i + 1;
+		j = i + 1;
+		
+		while (tail < head) {
+			j = j + 1;
+			tail = tail + j;
+		}
+		if (tail > head) continue;
+		cout << i<< endl;
+		
+	}
+	return 0;
+}
