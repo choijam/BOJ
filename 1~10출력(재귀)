@@ -1,0 +1,18 @@
+#include<string>
+using namespace std;
+
+//0~ 10까지 출력되는 재귀구조
+void print(int i) {
+	if (i<=0)
+		return;
+	print(i - 1);
+	cout << i << " ";
+}
+
+
+int main()
+{
+	int n;
+	print(10);
+	return 0;
+}
