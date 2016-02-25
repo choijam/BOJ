@@ -1,0 +1,55 @@
+#include<iostream>
+#include <fstream>
+#include <time.h>
+#include<string>
+using namespace std;
+
+int main()
+{
+	clock_t begin, end;
+	int n, m, i, result,a,b;
+	unsigned long long temp, max, max_num;
+	ifstream inFile;
+	ofstream outFile;
+	max = 0;
+	inFile.open("C:\\Users\\IT\\Desktop\\jihye\\sample.txt");
+	outFile.open("C:\\Users\\IT\\Desktop\\jihye\\output.txt");
+
+	while (inFile >> n >> m) {
+		a = n, b = m;
+
+		if (a> b) {
+			temp = b;
+			b = a;
+			a = temp;
+		}
+
+		begin = clock();
+		for (i = a; i <= b; i++) {
+			result = 1;
+			temp = i;
+			while (temp != 1) {
+				if (temp % 2 == 0) {
+					temp = temp / 2;
+					result++;
+				}
+				else {
+					temp = temp * 3 + 1;
+					temp = temp / 2;
+					result = result + 2;
+				}
+			}
+			if (max < result) {
+				max = result;
+				max_num = i;
+			}
+		}
+		outFile << n << " " << m <<" "<<max<< endl;
+	}
+		
+	end = clock();
+	cout << "수행시간 : " << ((end - begin) / 1000.) << endl;
+
+	inFile.close();
+	return 0;
+}
