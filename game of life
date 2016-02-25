@@ -1,0 +1,127 @@
+#include<iostream>
+#include<fstream>		//선언필요합니다.
+#include<time.h>
+#include<windows.h>
+using namespace std;
+int re(int n) {
+	if (n <= 0)
+		return 0;
+	re(n - 1);
+	cout<<n<<" ";
+}
+int main() {
+	int n;	cin >> n;
+	re(n);
+}
+/*Life Game*/
+//int main() {
+//	int	di[8] = { 0,1,1,1,0,-1,-1,-1 };
+//	int	dj[8] = { 1,1,0,-1,-1,-1,0,1 };
+//	int size = 10;	int sum = 0;
+//	int check = 1;	int s = 0;
+//	int next[12][12] = { 0 };
+//	int now[12][12] =
+//	{ { 0,0,0,0,0,0,0,0,0,0,0,0 },
+//	  { 0,0,0,0,0,0,0,0,0,0,0,0 },
+//	  { 0,0,0,0,0,0,0,1,1,1,0,0 },
+//	  { 0,0,0,0,0,0,1,1,1,0,0,0 },
+//	  { 0,0,0,0,0,0,0,0,0,0,0,0 },
+//	  { 0,0,0,0,0,0,0,0,0,0,0,0 },
+//	  { 0,0,0,0,0,0,0,0,0,0,0,0 },
+//	  { 0,0,0,0,0,0,0,0,0,0,0,0 },
+//	  { 0,0,0,0,0,0,0,0,0,0,0,0 },
+//	  { 0,0,0,0,0,0,0,0,0,0,0,0 },
+//	  { 0,0,0,0,0,0,0,0,0,0,0,0 },
+//	  { 0,0,0,0,0,0,0,0,0,0,0,0 }, };
+//	while(check){
+//		for (int i = 1;i < size + 1;i++) {
+//			for (int j = 1;j < size + 1;j++) {
+//				if (now[i][j] == 1)
+//					cout << "■";
+//				else
+//					cout << "□";
+//			}cout << endl;
+//		}
+//		Sleep(1000);
+//		for (int i = 1;i < size + 1;i++) {
+//			for (int j = 1;j < size + 1;j++) {
+//				sum = 0;
+//				for (int k = 0;k < 8;k++) {
+//					sum += now[i + di[k]][j + dj[k]];
+//				}
+//				if ((now[i][j] == 1 && (sum == 2 || sum == 3)) || (now[i][j] == 0 && sum == 3))
+//					next[i][j] = 1;
+//				else
+//					next[i][j] = 0;
+//			}
+//		}
+//		for (int i = 1;i < size + 1;i++) {
+//			for (int j = 1;j < size + 1;j++) {
+//				check += now[i][j];
+//				now[i][j] = next[i][j];
+//			}
+//		}
+//		system("cls");
+//	}
+//}
+//
+ 
+ 
+///* 3N+1 */ 
+//int main() {
+//	long long num,a,b,max=0,k;
+//	long long count = 1; 
+//	int *arr = new int[1000001];
+//	ifstream in;		//파일열기위한 변수선언
+//	in.open("C:\\Users\\sw\\Desktop\\input.txt");//파일의 주소
+//	ofstream out;		//파일 쓰기
+//	out.open("C:\\Users\\sw\\Desktop\\output.txt");
+//	clock_t start = clock();
+//	arr[1] = 1;
+//	for (num = 1;num <= 1000000;num++) {
+//		k = num;
+//		count = 1;
+//		while (k != 1) {
+//			if (k % 2 == 1) {
+//				k = 3 * k + 1;	count++;
+//			}
+//			k /= 2;
+//			if (k < num) {
+//				arr[num] = arr[k] + count;
+//				break;
+//			}
+//			count++;
+//		}
+//	}
+//	while (in >> a >> b) {	//입력이 있을때까지
+//		out << a << " " << b;	//출력
+//		if (a > b) {
+//			int tmp = a;
+//			a = b;
+//			b = tmp;
+//		}	
+//		for (int i = a;i <= b;i++) {
+//			if (arr[i] > max)	max = arr[i];
+//		}
+//		out <<" "<< max << endl;
+//		max = 0;
+//	}clock_t end = clock();
+//	cout << (end - start) / 1000. << endl;
+//}
+//int main() {
+//	int n = 10000;
+//	int head = 0;
+//	int tail,j;
+//	for (int i = 1;i <= n;i++) {
+//		head += (i-1);
+//		tail = i + 1;
+//		j = i + 1;		
+//		while (tail < head) {
+//			j += 1;		
+//			tail += j;	
+//		}
+//		if (tail == head)
+//			cout <<"1 + ..."<< i-1<<" "<<i<<" "<<i+1<<"+ ..."<< j <<"= "<< head << endl;
+//	}
+//}
+ 
